@@ -16,12 +16,12 @@ import Foundation
  discovery by
  */
 struct PeriodicTableData: Codable {
-    let atomicMass: Double
-    let boil: Double
-    let melt: Double
-    let namedBy: String
-    let number: Int
-    let symbol: String
+    let atomicMass: Double?
+    let boil: Double?
+    let melt: Double?
+    let namedBy: String?
+    let number: Int?
+    let symbol: String?
     enum CodingKeys: String, CodingKey{
         case atomicMass = "atomic_mass"
         case boil
