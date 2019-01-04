@@ -28,5 +28,21 @@ final class PeriodicTableApiClient {
             }
         }
     }
-    static func sendElementMyFavorites(){}
+    static func sendElementMyFavorites(data: Data, callBack: @escaping (AppError?, Bool)-> Void){
+        NetworkHelper.shared.performUploadTask(endpointURLString: "https://5c1d79abbc26950013fbcaa9.mockapi.io/api/v1/favorites", httpMethod: "POST", httpBody: data) { (appError, data, httpResponse) in
+            if let appError = appError {
+                callBack(appError, false)
+            }
+            guard let response = httpResponse, (200...299).contains(response.statusCode) else {
+                let statusCode = httpResponse?.statusCode ?? -999
+                callBack(AppError.badStatusCode(String(statusCode)), false)
+                return
+            }
+            //todo create a favoite and confirm favId
+            if let _ = data {
+                callBack(nil, true)
+            }
+        }
+        
+    }
 }

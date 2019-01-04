@@ -39,7 +39,22 @@ class DetailEVC: UIViewController {
         
     }
     @IBAction func addThisElementToMyFavorites(_ sender: Any) {
-        
+        guard let  name = iExpectAnElmentFromThePeriodicTable.name, let symbol = iExpectAnElmentFromThePeriodicTable.symbol else {return}
+        let myFavortite = Favorite.init(elementName: name, elementSymbol: symbol, favoritedBy: "Ibaheem The Science Guy")
+        do {
+            let data  = try JSONEncoder().encode(myFavortite)
+            PeriodicTableApiClient.sendElementMyFavorites(data: data) { (appError, success) in
+                if let appError = appError {
+                    print("Sending podcast to favorites error: \(appError)")
+                } else if success {
+                    print("Successfully added to the favorites qeue")
+                } else {
+                    print("was not successfull")
+                }
+            }
+        } catch {
+            print("error is \(error)")
+        }
     }
     
 }
