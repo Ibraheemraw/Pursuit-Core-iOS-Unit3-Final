@@ -162,8 +162,22 @@
                         <viewLayoutGuide key="safeArea" id="HPr-jX-j27"/>
                     </view>
                     <navigationItem key="navigationItem" title="Title" id="3nB-wz-LbR">
-                        <barButtonItem key="rightBarButtonItem" title="Favorites" id="WFP-bZ-T3m"/>
+                        <barButtonItem key="rightBarButtonItem" title="Favorites" id="WFP-bZ-T3m">
+                            <connections>
+                                <action selector="addThisElementToMyFavorites:" destination="WtM-sn-OYh" id="Kgl-sR-zdE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="atomicMassValue" destination="GPT-tZ-Msx" id="bOQ-xc-pyh"/>
+                        <outlet property="boilingPointValue" destination="4rC-vk-uy6" id="hNP-Zs-f3s"/>
+                        <outlet property="elementSymbol" destination="RYf-o3-8Yy" id="1iE-Td-pyG"/>
+                        <outlet property="elementWasDiscoveredBy" destination="Z2R-6I-VMA" id="EkT-st-5TQ"/>
+                        <outlet property="largerElementImage" destination="hUd-vl-BCh" id="Kyc-BN-cfy"/>
+                        <outlet property="meltingPointValue" destination="CrH-C9-Rvi" id="ib7-Ob-Kt4"/>
+                        <outlet property="myFavoriteElement" destination="WFP-bZ-T3m" id="Y8p-mz-9PS"/>
+                        <outlet property="numberOfElementInThePT" destination="kh7-BE-hJI" id="fwH-1S-o7A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJq-sY-4rK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
