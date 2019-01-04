@@ -59,6 +59,9 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="nameOfElement" destination="5Oz-ti-plN" id="hQb-a4-Lvo"/>
+                                            <outlet property="periodicTableImage" destination="Ev6-XJ-XZK" id="4h4-TL-Umg"/>
+                                            <outlet property="symbolAndAtomicMass" destination="nIL-L2-SeY" id="JYs-FR-MkX"/>
                                             <segue destination="WtM-sn-OYh" kind="show" id="jnz-jM-fN1"/>
                                         </connections>
                                     </tableViewCell>
@@ -75,6 +78,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" id="2UB-89-eAP"/>
+                    <connections>
+                        <outlet property="periodicTableTableView" destination="3D1-jU-VFj" id="mXc-D8-DaB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

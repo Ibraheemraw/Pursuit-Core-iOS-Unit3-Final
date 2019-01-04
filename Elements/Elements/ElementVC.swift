@@ -9,10 +9,17 @@
 import UIKit
 
 class ElementVC: UIViewController {
-    
+    @IBOutlet weak var periodicTableTableView: UITableView!
+    var elements = [PeriodicTableData](){
+        didSet{
+            DispatchQueue.main.async {
+                <#code#>
+            }
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
     }
     
     

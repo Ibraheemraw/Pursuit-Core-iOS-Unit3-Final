@@ -9,6 +9,9 @@
 import UIKit
 
 class ElementTableViewCell: UITableViewCell {
+    @IBOutlet weak var periodicTableImage: UIImageView!
+    @IBOutlet weak var nameOfElement: UILabel!
+    @IBOutlet weak var symbolAndAtomicMass: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         
