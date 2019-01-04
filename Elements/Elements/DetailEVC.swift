@@ -27,15 +27,26 @@ class DetailEVC: UIViewController {
         }
     }
     func updatingMyDetailVCItems(){
-        guard let symbol = iExpectAnElmentFromThePeriodicTable.symbol, let number = iExpectAnElmentFromThePeriodicTable.number, let am = iExpectAnElmentFromThePeriodicTable.atomicMass, let mp = iExpectAnElmentFromThePeriodicTable.melt, let bp = iExpectAnElmentFromThePeriodicTable.boil, let founder = iExpectAnElmentFromThePeriodicTable.namedBy else {
-            return
+//        guard let symbol = iExpectAnElmentFromThePeriodicTable.symbol, let number = iExpectAnElmentFromThePeriodicTable.number, let am = iExpectAnElmentFromThePeriodicTable.atomicMass, let mp = iExpectAnElmentFromThePeriodicTable.melt, let bp = iExpectAnElmentFromThePeriodicTable.boil, let founder = iExpectAnElmentFromThePeriodicTable.namedBy, let name = iExpectAnElmentFromThePeriodicTable.name else {
+//            return
+//        }
+        elementSymbol.text = "Element: \(iExpectAnElmentFromThePeriodicTable.name ?? "Error")"
+        numberOfElementInThePT.text = "Electrons: \(iExpectAnElmentFromThePeriodicTable.number ?? 0)"
+        atomicMassValue.text = "Atomic Weight: \(iExpectAnElmentFromThePeriodicTable.atomicMass ?? 0.0)"
+        meltingPointValue.text = "Melting Point: \(iExpectAnElmentFromThePeriodicTable.melt ?? 0.0)"
+        boilingPointValue.text = "Boiling Point: \(iExpectAnElmentFromThePeriodicTable.boil ?? 0.0)"
+        elementWasDiscoveredBy.text = "Discovering Scientist: \(iExpectAnElmentFromThePeriodicTable.namedBy ?? "Error")"
+        
+        let imageURL = "http://images-of-elements.com/\(iExpectAnElmentFromThePeriodicTable.name?.lowercased() ?? "Error").jpg"
+        ImageHelper.shared.fetchImage(urlString: imageURL) { (appError, image) in
+            if let appError = appError {
+                print(appError.errorMessage())
+            } else if let image = image {
+                DispatchQueue.main.async {
+                    self.largerElementImage.image = image
+                }
+            }
         }
-        elementSymbol.text = "Element: \(symbol)"
-        numberOfElementInThePT.text = "Electrons: \(number)"
-        atomicMassValue.text = "Atomic Weight: \(am)"
-        meltingPointValue.text = "Melting Point: \(mp)"
-        boilingPointValue.text = "Boiling Point: \(bp)"
-        elementWasDiscoveredBy.text = "Discovering Scientist: \(founder)"
         
     }
     @IBAction func addThisElementToMyFavorites(_ sender: Any) {
