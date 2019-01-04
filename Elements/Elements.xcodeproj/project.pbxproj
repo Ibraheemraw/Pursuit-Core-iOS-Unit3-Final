@@ -13,6 +13,7 @@
 		4803100321DFB736005C67F2 /* DetailEVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4803100221DFB736005C67F2 /* DetailEVC.swift */; };
 		4803100521DFB7A0005C67F2 /* ElementTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4803100421DFB7A0005C67F2 /* ElementTableViewCell.swift */; };
 		4803100721DFB9E7005C67F2 /* PeriodicTableData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4803100621DFB9E7005C67F2 /* PeriodicTableData.swift */; };
+		4803100921DFC435005C67F2 /* PeriodicTableApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4803100821DFC435005C67F2 /* PeriodicTableApiClient.swift */; };
 		5734756221DA90C700FB6177 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734756121DA90C700FB6177 /* AppDelegate.swift */; };
 		5734756421DA90C700FB6177 /* ElementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5734756321DA90C700FB6177 /* ElementVC.swift */; };
 		5734756721DA90C700FB6177 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5734756521DA90C700FB6177 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 		4803100221DFB736005C67F2 /* DetailEVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailEVC.swift; sourceTree = "<group>"; };
 		4803100421DFB7A0005C67F2 /* ElementTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementTableViewCell.swift; sourceTree = "<group>"; };
 		4803100621DFB9E7005C67F2 /* PeriodicTableData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicTableData.swift; sourceTree = "<group>"; };
+		4803100821DFC435005C67F2 /* PeriodicTableApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeriodicTableApiClient.swift; sourceTree = "<group>"; };
 		5734755E21DA90C700FB6177 /* Elements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Elements.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5734756121DA90C700FB6177 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5734756321DA90C700FB6177 /* ElementVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementVC.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 				4803100121DFB217005C67F2 /* NetworkServices */,
 				5734756321DA90C700FB6177 /* ElementVC.swift */,
 				5734756521DA90C700FB6177 /* Main.storyboard */,
+				4803100821DFC435005C67F2 /* PeriodicTableApiClient.swift */,
 				4803100621DFB9E7005C67F2 /* PeriodicTableData.swift */,
 				4803100421DFB7A0005C67F2 /* ElementTableViewCell.swift */,
 				4803100221DFB736005C67F2 /* DetailEVC.swift */,
@@ -173,6 +176,7 @@
 				4803100321DFB736005C67F2 /* DetailEVC.swift in Sources */,
 				48030FFC21DFB1C9005C67F2 /* NetworkHelper.swift in Sources */,
 				4803100721DFB9E7005C67F2 /* PeriodicTableData.swift in Sources */,
+				4803100921DFC435005C67F2 /* PeriodicTableApiClient.swift in Sources */,
 				4803100021DFB1EE005C67F2 /* AppError.swift in Sources */,
 				5734756221DA90C700FB6177 /* AppDelegate.swift in Sources */,
 				48030FFE21DFB1D5005C67F2 /* ImageHelper.swift in Sources */,
