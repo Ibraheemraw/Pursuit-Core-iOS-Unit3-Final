@@ -22,9 +22,9 @@ class DetailEVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         updatingMyDetailVCItems()
-        
-        
-        
+        if let navTitle = iExpectAnElmentFromThePeriodicTable.name {
+            title = navTitle
+        }
     }
     func updatingMyDetailVCItems(){
         guard let symbol = iExpectAnElmentFromThePeriodicTable.symbol, let number = iExpectAnElmentFromThePeriodicTable.number, let am = iExpectAnElmentFromThePeriodicTable.atomicMass, let mp = iExpectAnElmentFromThePeriodicTable.melt, let bp = iExpectAnElmentFromThePeriodicTable.boil, let founder = iExpectAnElmentFromThePeriodicTable.namedBy else {

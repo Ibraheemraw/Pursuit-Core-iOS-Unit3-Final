@@ -27,6 +27,19 @@ class ElementTableViewCell: UITableViewCell {
         nameOfElement.text = name
         let secondLabel = "\(elementSymbol)(\(elementNumber)) \(atomicMassOfTheElement)"
         symbolAndAtomicMass.text = secondLabel
+            var value = ""
+            value = String(format: "%03d", elementNumber)
+        print(value)
+        let imageURL = "http://www.theodoregray.com/periodictable/Tiles/\(value)/s7.JPG"
+        ImageHelper.shared.fetchImage(urlString: imageURL) { (appError, image) in
+            if let appError = appError {
+                print(appError.errorMessage())
+            } else if let image = image {
+                DispatchQueue.main.async {
+                    self.periodicTableImage.image = image
+                }
+            }
+        }
+        
     }
-
 }
