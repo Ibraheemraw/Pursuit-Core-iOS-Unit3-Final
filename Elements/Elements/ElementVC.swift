@@ -34,6 +34,11 @@ class ElementVC: UIViewController {
             }
         }
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destination = segue.destination as? DetailEVC, let indexPath = periodicTableTableView.indexPathForSelectedRow else {fatalError("Error with the perapre for segue function")}
+        destination.iExpectAnElmentFromThePeriodicTable = elements[indexPath.row]
+        
+    }
     
     
 }
