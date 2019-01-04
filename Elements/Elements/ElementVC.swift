@@ -20,6 +20,7 @@ class ElementVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         periodicTableTableView.dataSource = self
+        periodicTableTableView.delegate = self
         findElements()
         
     }
@@ -28,13 +29,18 @@ class ElementVC: UIViewController {
             if let appError = appError {
                 print(appError.errorMessage())
             } else if let elementsInPT = elementsInPT {
-                print("found \(elementsInPT.count) elements")
-//                self.podcasts = podcasts
+//                print("found \(elementsInPT.count) elements")
+                self.elements = elementsInPT
             }
         }
     }
     
     
+}
+extension ElementVC: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 190
+    }
 }
 extension ElementVC: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -42,7 +48,10 @@ extension ElementVC: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ElementCell", for: indexPath) as? ElementTableViewCell else {return UITableViewCell()}
+        let settingMyElements = elements[indexPath.row]
+        cell.elementsIExpect = settingMyElements
+        return cell
     }
     
     

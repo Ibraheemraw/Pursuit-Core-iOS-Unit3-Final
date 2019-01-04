@@ -12,15 +12,21 @@ class ElementTableViewCell: UITableViewCell {
     @IBOutlet weak var periodicTableImage: UIImageView!
     @IBOutlet weak var nameOfElement: UILabel!
     @IBOutlet weak var symbolAndAtomicMass: UILabel!
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
+    var elementsIExpect: PeriodicTableData! {
+        didSet{
+            updateMyElementUI()
+        }
     }
     
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-        
-        
-    }
+    func updateMyElementUI(){
     
+        guard let elementSymbol = elementsIExpect.symbol, let atomicMassOfTheElement = elementsIExpect.atomicMass, let name = elementsIExpect.name, let elementNumber = elementsIExpect.number else {
+            return
+        }
+    
+        nameOfElement.text = name
+        let secondLabel = "\(elementSymbol)(\(elementNumber)) \(atomicMassOfTheElement)"
+        symbolAndAtomicMass.text = secondLabel
+    }
+
 }

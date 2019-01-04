@@ -19,6 +19,7 @@ struct PeriodicTableData: Codable {
     let atomicMass: Double?
     let boil: Double?
     let melt: Double?
+    let name: String?
     let namedBy: String?
     let number: Int?
     let symbol: String?
@@ -26,6 +27,7 @@ struct PeriodicTableData: Codable {
         case atomicMass = "atomic_mass"
         case boil
         case melt
+        case name
         case namedBy = "named_by"
         case number
         case symbol
