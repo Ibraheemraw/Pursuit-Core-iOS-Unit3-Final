@@ -28,7 +28,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="202.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PTOF" translatesAutoresizingMaskIntoConstraints="NO" id="Ev6-XJ-XZK">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Atom" translatesAutoresizingMaskIntoConstraints="NO" id="Ev6-XJ-XZK">
                                                     <rect key="frame" x="20.666666666666671" y="60.666666666666664" width="83" height="81.333333333333343"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Oz-ti-plN">
@@ -118,6 +118,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="PTOF" width="360" height="215.25"/>
+        <image name="Atom" width="1000" height="1080"/>
     </resources>
 </document>
