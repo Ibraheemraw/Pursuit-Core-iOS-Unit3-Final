@@ -21,10 +21,25 @@ class DetailEVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        updatingMyDetailVCItems()
+        
         
         
     }
+    func updatingMyDetailVCItems(){
+        guard let symbol = iExpectAnElmentFromThePeriodicTable.symbol, let number = iExpectAnElmentFromThePeriodicTable.number, let am = iExpectAnElmentFromThePeriodicTable.atomicMass, let mp = iExpectAnElmentFromThePeriodicTable.melt, let bp = iExpectAnElmentFromThePeriodicTable.boil, let founder = iExpectAnElmentFromThePeriodicTable.namedBy else {
+            return
+        }
+        elementSymbol.text = "Element: \(symbol)"
+        numberOfElementInThePT.text = "Electrons: \(number)"
+        atomicMassValue.text = "Atomic Weight: \(am)"
+        meltingPointValue.text = "Melting Point: \(mp)"
+        boilingPointValue.text = "Boiling Point: \(bp)"
+        elementWasDiscoveredBy.text = "Discovering Scientist: \(founder)"
+        
+    }
     @IBAction func addThisElementToMyFavorites(_ sender: Any) {
+        
     }
     
 }
