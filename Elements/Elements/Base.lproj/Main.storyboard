@@ -80,7 +80,7 @@
             </objects>
             <point key="canvasLocation" x="871.01449275362324" y="310.71428571428572"/>
         </scene>
-        <!--DetailEVC-->
+        <!--Title-->
         <scene sceneID="yIh-Fo-YGX">
             <objects>
                 <viewController id="WtM-sn-OYh" customClass="DetailEVC" customModule="Elements" customModuleProvider="target" sceneMemberID="viewController">
@@ -90,6 +90,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="HPr-jX-j27"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="3nB-wz-LbR">
+                        <barButtonItem key="rightBarButtonItem" title="Favorites" id="WFP-bZ-T3m"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NJq-sY-4rK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
